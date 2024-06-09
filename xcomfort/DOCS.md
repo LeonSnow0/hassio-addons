@@ -36,6 +36,10 @@ Add-on configuration:
 
 ```yaml
 mqtt_client_id: xcomfort
+mqtt_host: core_mosquitto
+mqtt_port: 1883
+mqtt_user: ""
+mqtt_passwd: ""
 eprom: true
 datapoints_file: ""
 verbose: false
@@ -48,7 +52,25 @@ ha_discovery_remove: false
 
 ### Option: `mqtt_client_id`
 
-ID of the MQTT client the daemon connects with. 
+ID of the MQTT client the daemon connects with.
+
+### Option: `mqtt_host`
+
+ID (intenal name; IP or DNS name) of the MQTT host to send the MQTT messages to. 
+Default = core_mosquitto (this is the standard internal host name Hassio assign to the default Mosquitto plugin)
+
+### Option: `mqtt_port`
+
+The port that the host is listening on.
+Default = 1883; this is the non-ssl port.
+
+### Option: `mqtt_user`
+
+The username used to connect to the host with. 
+
+### Option: `mqtt_passwd`
+
+The password for the user to connect to the host with.
 
 ### Option: `eprom`
 
